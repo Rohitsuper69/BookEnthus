@@ -1,0 +1,51 @@
+{% extends "menu/base.html" %}
+{% load static %}
+
+{% block content %}
+  <section class="container text-center">
+      <h2 class="mb-5">Welcome Reader</h2>
+      <div class="card-deck mr-4">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top img-fluid" src="{% static 'images/books.jpg' %}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">View and Create Reviews</h5>
+              <p class="card-text">You can write reviews on books you want and also see the reviews you have written</p>
+              <a href="bookreview" class="btn btn-primary">Select</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top img-fluid" src="{% static 'images/books1.jpg' %}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Books To Be Read or Completed</h5>
+              <p class="card-text">Write the name of books to be read or books to be completed</p>
+              <a href="todo" class="btn btn-primary">Select</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top img-fluid" src="{% static 'images/books4.jpg' %}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Search Books Online</h5>
+              <p class="card-text">Search books online accorind to your requirement</p>
+              <a href="books" class="btn btn-primary">Select</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top img-fluid" src="{% static 'images/books2.jpg' %}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Dictionary</h5>
+              <p class="card-text">Search meaning of words you come across while reading</p>
+              <a href="dict" class="btn btn-primary">Select</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top img-fluid" src="{% static 'images/books3.jpg' %}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Read Online Reviews</h5>
+              <p class="card-text">A place where you can read the reviews of other readers like you</p>
+              <a href="{% url 'online-reviews' %}" class="btn btn-primary">Select</a>
+            </div>
+          </div>
+      </div>
+      
+  </section>
+{% endblock content %}

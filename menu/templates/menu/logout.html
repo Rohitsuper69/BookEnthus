@@ -1,0 +1,15 @@
+{% extends "menu/base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>
+        You are Successfully Logout
+    </h2>   
+    <p>
+        Log in Again
+    </p> 
+    <a href="{% url 'login' %}">
+        Sign In
+    </a>
+</div>
+{% endblock content %}

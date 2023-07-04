@@ -1,0 +1,16 @@
+{% extends "menu/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="container">
+        <form method="POST" class="mt-5">
+            {% csrf_token %}
+            {{form|crispy}}
+            <div class="form-group">
+                <button href="" class="btn btn-outline-info" type="submit">
+                    Create
+                </button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

@@ -1,0 +1,29 @@
+{% extends 'menu/base.html' %} 
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="container">
+    <h1 class="mb-5  mt-3">
+        To Read Books
+    </h1>
+    <div class="col">
+        <div>
+            {% for obj in todos %}
+            <div class="mb-5 border" style="width: 70rem;">                
+                <div class="card-body">
+                  <h4 class="card-title">{{obj.title}}</h4>
+                  <a href="{% url 'delete-todo' obj.id %}" class="btn btn-danger">Delete</a>
+                </div>
+              </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div>
+        <a href="toread" class="btn btn-success btn-lg active" role="button" aria-pressed="true">
+            <h3>Write To Read Books</h3>
+        </a>
+    </div>
+</div>
+
+{% endblock content %}
