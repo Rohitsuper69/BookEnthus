@@ -73,23 +73,28 @@ def books(request):
         url="https://www.googleapis.com/books/v1/volumes?q="+text
         r=requests.get(url)
         answer=r.json()
-        result_list=[]
-        for i in range(10):
-            result_dict={
-               'title':answer['items'][i]['volumeInfo']['title'],
-               'subtitle':answer['items'][i]['volumeInfo'].get('subtitle'),
-               'desc':answer['items'][i]['volumeInfo'].get('description'),
-               'count':answer['items'][i]['volumeInfo'].get('pageCount'),
-               'categories':answer['items'][i]['volumeInfo'].get('categories'),
-               'rating':answer['items'][i]['volumeInfo'].get('pageRating'),
-               'thumbnail':answer['items'][i]['volumeInfo'].get('imageLinks').get('thumbnail'),
-               'preview':answer['items'][i]['volumeInfo'].get('previewLink')
-            }
-            result_list.append(result_dict)
-            context={
-                "form":form,
-                "results":result_list
-            }
+        try:
+            result_list=[]
+            for i in range(10):
+                result_dict={
+                'title':answer['items'][i]['volumeInfo']['title'],
+                'subtitle':answer['items'][i]['volumeInfo'].get('subtitle'),
+                'desc':answer['items'][i]['volumeInfo'].get('description'),
+                'count':answer['items'][i]['volumeInfo'].get('pageCount'),
+                'categories':answer['items'][i]['volumeInfo'].get('categories'),
+                'rating':answer['items'][i]['volumeInfo'].get('pageRating'),
+                'thumbnail':answer['items'][i]['volumeInfo'].get('imageLinks').get('thumbnail'),
+                'preview':answer['items'][i]['volumeInfo'].get('previewLink')
+                }
+                result_list.append(result_dict)
+                context={
+                    "form":form,
+                    "results":result_list
+                }
+        except:
+             context={
+                    "form":form
+                }
         return render(request,"menu/books.html",context)
     else:
         form = DashboardForm()
@@ -191,7 +196,6 @@ def cprofile(request):
     return render(request,'menu/cprofile.html',context)
 
 @login_required
-
 def online_reviews(request):
     reviews=bookReviews_model.objects.filter(isPublic=True).exclude(user=request.user)
     context={
