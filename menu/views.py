@@ -137,6 +137,7 @@ def dict(request):
         "form":form
     }
     return render(request,"menu/dict.html",context)
+@login_required
 
 def update_user_data(user):
     Profile.objects.update_or_create(user=user, defaults={'mob': user.profile.mob},)
@@ -155,7 +156,7 @@ def register(request):
         "form":form
     }
     return render(request,"menu/register.html",context)
-
+@login_required
 def profile(request):
     UserProfile = Profile.objects.filter(user=request.user)
     pk=request.user.id
@@ -168,7 +169,7 @@ def profile(request):
     else:
         return redirect('create-profile')
     
-
+@login_required
 def cprofile(request):
     if request.method == "POST":
         form = CreateProfileForm(request.POST)
@@ -189,6 +190,7 @@ def cprofile(request):
     }
     return render(request,'menu/cprofile.html',context)
 
+@login_required
 
 def online_reviews(request):
     reviews=bookReviews_model.objects.filter(isPublic=True).exclude(user=request.user)
