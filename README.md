@@ -1,5 +1,5 @@
 # BookEnthus
-A social mdeia website to write and manage book reviews. To read book section is also available. For enhancing experience a dictionary is also available along with looking online for books. User can also read reviews of other users in the webiste. 
+A social media website to write and manage book reviews. To read book section is also available. For enhancing experience a dictionary is also available along with looking online for books. User can also read reviews of other users in the webiste. 
 .Hence the website is full package for reading enthusiasts
 
 ## Tech Stack
