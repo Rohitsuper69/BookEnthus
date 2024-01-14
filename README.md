@@ -11,14 +11,14 @@ A social mdeia website to write and manage book reviews. To read book section is
 - Django
 - Tailwind
 ## Screenshoots
--[ss1](https://github.com/Rohitsuper69/BookEnthus/blob/main/Screenshots/ss1.png)
--[ss2](https://github.com/Rohitsuper69/BookEnthus/blob/main/Screenshots/ss2.png)
--[ss3](https://github.com/Rohitsuper69/BookEnthus/blob/main/Screenshots/ss3.png)
--[ss4](https://github.com/Rohitsuper69/BookEnthus/blob/main/Screenshots/ss4.png)
--[ss5](https://github.com/Rohitsuper69/BookEnthus/blob/main/Screenshots/ss5.png)
--[ss6](https://github.com/Rohitsuper69/BookEnthus/blob/main/Screenshots/ss6.png)
--[ss7](https://github.com/Rohitsuper69/BookEnthus/blob/main/Screenshots/ss7.png)
--[ss8](https://github.com/Rohitsuper69/BookEnthus/blob/main/Screenshots/ss8.png)
+![ss1](https://github.com/Rohitsuper69/BookEnthus/blob/main/Screenshots/ss1.png)
+![ss2](https://github.com/Rohitsuper69/BookEnthus/blob/main/Screenshots/ss2.png)
+![ss3](https://github.com/Rohitsuper69/BookEnthus/blob/main/Screenshots/ss3.png)
+![ss4](https://github.com/Rohitsuper69/BookEnthus/blob/main/Screenshots/ss4.png)
+![ss5](https://github.com/Rohitsuper69/BookEnthus/blob/main/Screenshots/ss5.png)
+![ss6](https://github.com/Rohitsuper69/BookEnthus/blob/main/Screenshots/ss6.png)
+![ss7](https://github.com/Rohitsuper69/BookEnthus/blob/main/Screenshots/ss7.png)
+![ss8](https://github.com/Rohitsuper69/BookEnthus/blob/main/Screenshots/ss8.png)
 
 
 
